@@ -31,6 +31,10 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
+#### [microsoft/agent-framework](https://github.com/microsoft/agent-framework)
+
+- [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
+
 #### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)
 
 - [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
