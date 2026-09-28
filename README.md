@@ -27,3 +27,21 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - open-source debugging and small focused fixes
 
 > **Simple systems. Explicit behavior. Reproducible results.**
+
+### Open Source Contributions
+
+<!-- OSS-CONTRIBUTIONS:START -->
+#### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)
+
+- [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
+- [#693](https://github.com/nicobailon/pi-mcp-adapter/pull/693) — fix(config): preserve malformed config files on write
+- [#697](https://github.com/nicobailon/pi-mcp-adapter/pull/697) — fix(config): read UTF-8 BOM-prefixed config files
+
+#### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents)
+
+- [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
+
+#### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context)
+
+- [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
+<!-- OSS-CONTRIBUTIONS:END -->
