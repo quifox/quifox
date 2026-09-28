@@ -41,9 +41,12 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 
 #### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents)
 
+- [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
+- [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
 
 #### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context)
 
+- [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
 <!-- OSS-CONTRIBUTIONS:END -->
