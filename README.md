@@ -34,8 +34,10 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 #### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)
 
 - [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
-- [#693](https://github.com/nicobailon/pi-mcp-adapter/pull/693) — fix(config): preserve malformed config files on write
 - [#697](https://github.com/nicobailon/pi-mcp-adapter/pull/697) — fix(config): read UTF-8 BOM-prefixed config files
+- [#693](https://github.com/nicobailon/pi-mcp-adapter/pull/693) — fix(config): preserve malformed config files on write
+- [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
+- [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
 #### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents)
 

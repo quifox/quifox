@@ -39,9 +39,8 @@ def api_get(path, token, params=None):
         raise RuntimeError(f"GitHub API {exc.code} for {url}: {body}") from exc
 
 
-def search_merged_prs(username, token):
+def search_prs(query, token):
     items = []
-    query = f"author:{username} is:pr is:merged"
 
     # GitHub's Search API exposes at most the first 1,000 matching results.
     for page in range(1, 11):
@@ -96,18 +95,15 @@ def normalize_title(title):
     return " ".join((title or "").replace("\r", " ").replace("\n", " ").split())
 
 
-def build_markdown(items, username, token):
-    grouped = defaultdict(list)
-    visibility_cache = {}
+def direct_contributions(username, token, visibility_cache):
+    items = search_prs(f"author:{username} is:pr is:merged", token)
+    contributions = []
 
     for item in items:
         pull = item.get("pull_request") or {}
         if not pull.get("merged_at"):
             continue
 
-        # OWNER is the strongest signal that this PR belongs to one of the
-        # user's own repositories, including repositories not named after the
-        # current login.
         if item.get("author_association") == "OWNER":
             continue
 
@@ -115,14 +111,126 @@ def build_markdown(items, username, token):
         if not is_public_external_repo(repo_name, username, token, visibility_cache):
             continue
 
-        grouped[repo_name].append(
+        contributions.append(
             {
+                "repo": repo_name,
                 "number": item["number"],
                 "title": normalize_title(item.get("title")),
                 "url": item.get("html_url"),
-                "merged_at": pull.get("merged_at") or "",
+                "landed_number": None,
+                "landed_url": None,
             }
         )
+
+    return contributions
+
+
+def pull_commits(repo_name, pr_number, token):
+    commits = []
+    for page in range(1, 11):
+        batch = api_get(
+            f"/repos/{repo_name}/pulls/{pr_number}/commits",
+            token,
+            {"per_page": 100, "page": page},
+        )
+        commits.extend(batch)
+        if len(batch) < 100:
+            break
+    return commits
+
+
+def merged_prs_for_commit(repo_name, sha, token):
+    pulls = api_get(f"/repos/{repo_name}/commits/{sha}/pulls", token)
+    return [pr for pr in pulls if pr.get("merged_at")]
+
+
+def promoted_contributions(username, token, visibility_cache):
+    # A contribution can land through a maintainer-authored PR while preserving
+    # the contributor's original commits. Detect that case using exact commit
+    # identity, rather than assuming that similar code or a mention is enough.
+    items = search_prs(f"author:{username} is:pr is:closed -is:merged", token)
+    contributions = []
+
+    for item in items:
+        if item.get("author_association") == "OWNER":
+            continue
+
+        repo_name = repo_name_from_api_url(item.get("repository_url", ""))
+        if not is_public_external_repo(repo_name, username, token, visibility_cache):
+            continue
+
+        source_number = item["number"]
+        try:
+            commits = pull_commits(repo_name, source_number, token)
+        except RuntimeError as exc:
+            print(f"Skipping {repo_name}#{source_number}: {exc}", file=sys.stderr)
+            continue
+
+        candidates = {}
+        for commit in commits:
+            sha = commit.get("sha")
+            if not sha:
+                continue
+
+            try:
+                associated = merged_prs_for_commit(repo_name, sha, token)
+            except RuntimeError as exc:
+                print(f"Skipping commit {sha[:12]} in {repo_name}: {exc}", file=sys.stderr)
+                continue
+
+            for pr in associated:
+                number = pr.get("number")
+                if not number or number == source_number:
+                    continue
+
+                # If the user authored the merged PR too, the direct path will
+                # already show it. This branch is specifically for maintainer
+                # promotions / re-submissions that preserve the user's commits.
+                if (pr.get("user") or {}).get("login", "").casefold() == username.casefold():
+                    continue
+
+                candidates[number] = pr
+
+        if not candidates:
+            continue
+
+        # Prefer the earliest merged PR containing the preserved commit(s);
+        # later PRs may simply be backports of the same change.
+        landed = min(
+            candidates.values(),
+            key=lambda pr: (pr.get("merged_at") or "9999", pr.get("number") or 10**12),
+        )
+
+        contributions.append(
+            {
+                "repo": repo_name,
+                "number": source_number,
+                "title": normalize_title(item.get("title")),
+                "url": item.get("html_url"),
+                "landed_number": landed["number"],
+                "landed_url": landed.get("html_url"),
+            }
+        )
+
+    return contributions
+
+
+def build_markdown(username, token):
+    grouped = defaultdict(list)
+    visibility_cache = {}
+
+    contributions = direct_contributions(username, token, visibility_cache)
+    contributions.extend(promoted_contributions(username, token, visibility_cache))
+
+    # Deduplicate by the contributor's original PR. The original PR number is
+    # also the stable sorting key for both direct and maintainer-landed changes.
+    unique = {}
+    for contribution in contributions:
+        key = (contribution["repo"].casefold(), contribution["number"])
+        unique[key] = contribution
+
+    for contribution in unique.values():
+        grouped[contribution["repo"]].append(contribution)
 
     if not grouped:
         return "_No merged external public pull requests found._"
@@ -133,13 +241,20 @@ def build_markdown(items, username, token):
         lines.append(f"#### [{repo_name}]({repo_url})")
         lines.append("")
 
-        prs = sorted(
-            grouped[repo_name],
-            key=lambda pr: (pr["merged_at"], pr["number"]),
-            reverse=True,
-        )
+        # Sort by the contributor's original PR number, newest/highest first.
+        prs = sorted(grouped[repo_name], key=lambda pr: pr["number"], reverse=True)
+
         for pr in prs:
-            lines.append(f'- [#{pr["number"]}]({pr["url"]}) — {pr["title"]}')
+            if pr["landed_number"]:
+                pr_label = (
+                    f'[#{pr["number"]}]({pr["url"]}) → '
+                    f'[#{pr["landed_number"]}]({pr["landed_url"]})'
+                )
+            else:
+                pr_label = f'[#{pr["number"]}]({pr["url"]})'
+
+            lines.append(f'- {pr_label} — {pr["title"]}')
+
         lines.append("")
 
     return "\n".join(lines).rstrip()
@@ -174,8 +289,7 @@ def main():
     if not token:
         raise RuntimeError("GITHUB_TOKEN is required")
 
-    items = search_merged_prs(username, token)
-    generated = build_markdown(items, username, token)
+    generated = build_markdown(username, token)
     update_readme(generated)
 
 
