@@ -95,6 +95,10 @@ def normalize_title(title):
     return " ".join((title or "").replace("\r", " ").replace("\n", " ").split())
 
 
+def first_line(message):
+    return normalize_title((message or "").splitlines()[0] if message else "")
+
+
 def direct_contributions(username, token, visibility_cache):
     items = search_prs(f"author:{username} is:pr is:merged", token)
     contributions = []
@@ -144,12 +148,120 @@ def merged_prs_for_commit(repo_name, sha, token):
     return [pr for pr in pulls if pr.get("merged_at")]
 
 
+def recent_closed_prs(repo_name, token, cache):
+    if repo_name in cache:
+        return cache[repo_name]
+
+    pulls = []
+    for page in range(1, 11):
+        batch = api_get(
+            f"/repos/{repo_name}/pulls",
+            token,
+            {
+                "state": "closed",
+                "sort": "updated",
+                "direction": "desc",
+                "per_page": 100,
+                "page": page,
+            },
+        )
+        pulls.extend(batch)
+        if len(batch) < 100:
+            break
+
+    cache[repo_name] = pulls
+    return pulls
+
+
+def user_commit_messages(commits, username):
+    messages = set()
+    for commit in commits:
+        author = commit.get("author") or {}
+        if author.get("login", "").casefold() != username.casefold():
+            continue
+        message = first_line((commit.get("commit") or {}).get("message"))
+        if message:
+            messages.add(message)
+    return messages
+
+
+def linked_replayed_landing_pr(
+    repo_name,
+    source_item,
+    source_commits,
+    username,
+    token,
+    closed_pr_cache,
+    commit_cache,
+):
+    source_number = source_item["number"]
+    source_title = normalize_title(source_item.get("title"))
+    source_url = source_item.get("html_url") or ""
+    source_messages = user_commit_messages(source_commits, username)
+
+    if not source_messages:
+        return None
+
+    source_ref = f"#{source_number}"
+    candidates = []
+
+    for pr in recent_closed_prs(repo_name, token, closed_pr_cache):
+        number = pr.get("number")
+        if not number or number == source_number or not pr.get("merged_at"):
+            continue
+
+        if (pr.get("user") or {}).get("login", "").casefold() == username.casefold():
+            continue
+
+        body = pr.get("body") or ""
+        title = normalize_title(pr.get("title"))
+
+        # A maintainer promotion/replay should explicitly point back to the
+        # original PR, or preserve its title. This prevents unrelated PRs that
+        # happen to contain one similarly named commit from being counted.
+        linked = source_ref in body or source_url in body or title == source_title
+        if not linked:
+            continue
+
+        cache_key = (repo_name, number)
+        if cache_key not in commit_cache:
+            try:
+                commit_cache[cache_key] = pull_commits(repo_name, number, token)
+            except RuntimeError as exc:
+                print(f"Skipping candidate {repo_name}#{number}: {exc}", file=sys.stderr)
+                commit_cache[cache_key] = []
+
+        candidate_messages = user_commit_messages(commit_cache[cache_key], username)
+        overlap = source_messages & candidate_messages
+        if not overlap:
+            continue
+
+        # An explicit reference to the original PR plus at least one matching
+        # user-authored commit is strong evidence. If there is no explicit
+        # reference, require every original user-authored commit message to be
+        # present in the maintainer PR.
+        explicitly_linked = source_ref in body or source_url in body
+        if not explicitly_linked and not source_messages.issubset(candidate_messages):
+            continue
+
+        candidates.append(pr)
+
+    if not candidates:
+        return None
+
+    # Prefer the earliest merged PR that absorbed the contribution. Later ones
+    # may simply be backports or follow-up cherry-picks.
+    return min(
+        candidates,
+        key=lambda pr: (pr.get("merged_at") or "9999", pr.get("number") or 10**12),
+    )
+
+
 def promoted_contributions(username, token, visibility_cache):
-    # A contribution can land through a maintainer-authored PR while preserving
-    # the contributor's original commits. Detect that case using exact commit
-    # identity, rather than assuming that similar code or a mention is enough.
     items = search_prs(f"author:{username} is:pr is:closed -is:merged", token)
     contributions = []
+    closed_pr_cache = {}
+    commit_cache = {}
 
     for item in items:
         if item.get("author_association") == "OWNER":
@@ -161,13 +273,15 @@ def promoted_contributions(username, token, visibility_cache):
 
         source_number = item["number"]
         try:
-            commits = pull_commits(repo_name, source_number, token)
+            source_commits = pull_commits(repo_name, source_number, token)
         except RuntimeError as exc:
             print(f"Skipping {repo_name}#{source_number}: {exc}", file=sys.stderr)
             continue
 
-        candidates = {}
-        for commit in commits:
+        # First prefer exact commit identity. This is the strongest possible
+        # signal when a maintainer PR carries the original commits unchanged.
+        exact_candidates = {}
+        for commit in source_commits:
             sha = commit.get("sha")
             if not sha:
                 continue
@@ -182,24 +296,31 @@ def promoted_contributions(username, token, visibility_cache):
                 number = pr.get("number")
                 if not number or number == source_number:
                     continue
-
-                # If the user authored the merged PR too, the direct path will
-                # already show it. This branch is specifically for maintainer
-                # promotions / re-submissions that preserve the user's commits.
                 if (pr.get("user") or {}).get("login", "").casefold() == username.casefold():
                     continue
+                exact_candidates[number] = pr
 
-                candidates[number] = pr
+        if exact_candidates:
+            landed = min(
+                exact_candidates.values(),
+                key=lambda pr: (pr.get("merged_at") or "9999", pr.get("number") or 10**12),
+            )
+        else:
+            # Rebases/cherry-picks change SHAs. Fall back to a stricter replay
+            # check: original-PR linkage plus commits still attributed by
+            # GitHub to this user with matching first-line commit messages.
+            landed = linked_replayed_landing_pr(
+                repo_name,
+                item,
+                source_commits,
+                username,
+                token,
+                closed_pr_cache,
+                commit_cache,
+            )
 
-        if not candidates:
+        if not landed:
             continue
-
-        # Prefer the earliest merged PR containing the preserved commit(s);
-        # later PRs may simply be backports of the same change.
-        landed = min(
-            candidates.values(),
-            key=lambda pr: (pr.get("merged_at") or "9999", pr.get("number") or 10**12),
-        )
 
         contributions.append(
             {
@@ -241,7 +362,7 @@ def build_markdown(username, token):
         lines.append(f"#### [{repo_name}]({repo_url})")
         lines.append("")
 
-        # Sort by the contributor's original PR number, newest/highest first.
+        # Sort by the contributor's original PR number, highest/newest first.
         prs = sorted(grouped[repo_name], key=lambda pr: pr["number"], reverse=True)
 
         for pr in prs:
