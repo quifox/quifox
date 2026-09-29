@@ -399,10 +399,20 @@ def build_markdown(username, token):
         repo_name = project["repo"]
         repo_url = f"https://github.com/{repo_name}"
         count = project["contributions"]
-        contribution_label = "contribution" if count == 1 else "contributions"
+        stars_badge = (
+            f"https://img.shields.io/github/stars/{repo_name}"
+            "?style=flat-square&logo=github&label=stars"
+        )
+        contributions_badge = (
+            "https://img.shields.io/badge/"
+            f"contributions-{count}-8B5CF6?style=flat-square"
+        )
+        stars_url = f"{repo_url}/stargazers"
+
         lines.append(
-            f'#### [{repo_name}]({repo_url}) · ⭐ {project["stars"]:,} '
-            f'· {count} {contribution_label}'
+            f'#### [{repo_name}]({repo_url}) '
+            f'[![Stars]({stars_badge})]({stars_url}) '
+            f'![Contributions]({contributions_badge})'
         )
         lines.append("")
 
