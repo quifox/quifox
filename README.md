@@ -31,17 +31,17 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [microsoft/agent-framework](https://github.com/microsoft/agent-framework) · ⭐ 13,849 · 1 contribution
+#### [microsoft/agent-framework](https://github.com/microsoft/agent-framework) [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
 
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
-#### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents) · ⭐ 3,782 · 3 contributions
+#### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents) [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
 
-#### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) · ⭐ 1,558 · 5 contributions
+#### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) [![Stars](https://img.shields.io/github/stars/nicobailon/pi-mcp-adapter?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) ![Contributions](https://img.shields.io/badge/contributions-5-8B5CF6?style=flat-square)
 
 - [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
 - [#697](https://github.com/nicobailon/pi-mcp-adapter/pull/697) — fix(config): read UTF-8 BOM-prefixed config files
@@ -49,7 +49,7 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) · ⭐ 362 · 2 contributions
+#### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) [![Stars](https://img.shields.io/github/stars/ranxianglei/billion-context?style=flat-square&logo=github&label=stars)](https://github.com/ranxianglei/billion-context/stargazers) ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
