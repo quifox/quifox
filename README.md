@@ -31,11 +31,17 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [microsoft/agent-framework](https://github.com/microsoft/agent-framework)
+#### [microsoft/agent-framework](https://github.com/microsoft/agent-framework) · ⭐ 13,849 · 1 contribution
 
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
-#### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)
+#### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents) · ⭐ 3,782 · 3 contributions
+
+- [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
+- [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
+- [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
+
+#### [nicobailon/pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) · ⭐ 1,558 · 5 contributions
 
 - [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
 - [#697](https://github.com/nicobailon/pi-mcp-adapter/pull/697) — fix(config): read UTF-8 BOM-prefixed config files
@@ -43,13 +49,7 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [nicobailon/pi-subagents](https://github.com/nicobailon/pi-subagents)
-
-- [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
-- [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
-- [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
-
-#### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context)
+#### [ranxianglei/billion-context](https://github.com/ranxianglei/billion-context) · ⭐ 362 · 2 contributions
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
