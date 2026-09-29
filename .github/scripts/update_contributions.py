@@ -71,24 +71,33 @@ def repo_name_from_api_url(repository_url):
     return repository_url[len(prefix):]
 
 
-def is_public_external_repo(repo_name, username, token, cache):
+def get_repo_metadata(repo_name, username, token, cache):
     if not repo_name:
-        return False
+        return None
 
     owner = repo_name.split("/", 1)[0]
     if owner.casefold() == username.casefold():
-        return False
+        return None
 
     if repo_name not in cache:
         try:
             repo = api_get(f"/repos/{repo_name}", token)
-            cache[repo_name] = not bool(repo.get("private", True))
+            if repo.get("private", True):
+                cache[repo_name] = None
+            else:
+                cache[repo_name] = {
+                    "stars": int(repo.get("stargazers_count") or 0),
+                }
         except RuntimeError as exc:
             # Fail closed: if visibility cannot be verified, do not publish it.
             print(f"Skipping {repo_name}: {exc}", file=sys.stderr)
-            cache[repo_name] = False
+            cache[repo_name] = None
 
     return cache[repo_name]
+
+
+def is_public_external_repo(repo_name, username, token, cache):
+    return get_repo_metadata(repo_name, username, token, cache) is not None
 
 
 def normalize_title(title):
@@ -338,10 +347,10 @@ def promoted_contributions(username, token, visibility_cache):
 
 def build_markdown(username, token):
     grouped = defaultdict(list)
-    visibility_cache = {}
+    repo_metadata_cache = {}
 
-    contributions = direct_contributions(username, token, visibility_cache)
-    contributions.extend(promoted_contributions(username, token, visibility_cache))
+    contributions = direct_contributions(username, token, repo_metadata_cache)
+    contributions.extend(promoted_contributions(username, token, repo_metadata_cache))
 
     # Deduplicate by the contributor's original PR. The original PR number is
     # also the stable sorting key for both direct and maintainer-landed changes.
@@ -356,14 +365,49 @@ def build_markdown(username, token):
     if not grouped:
         return "_No merged external public pull requests found._"
 
+    projects = []
+    for repo_name, prs in grouped.items():
+        metadata = get_repo_metadata(
+            repo_name,
+            username,
+            token,
+            repo_metadata_cache,
+        )
+        if metadata is None:
+            continue
+
+        projects.append(
+            {
+                "repo": repo_name,
+                "stars": metadata["stars"],
+                "contributions": len(prs),
+                "prs": prs,
+            }
+        )
+
+    # Rank projects by public impact first, then contribution depth.
+    projects.sort(
+        key=lambda project: (
+            -project["stars"],
+            -project["contributions"],
+            project["repo"].casefold(),
+        )
+    )
+
     lines = []
-    for repo_name in sorted(grouped, key=str.casefold):
+    for project in projects:
+        repo_name = project["repo"]
         repo_url = f"https://github.com/{repo_name}"
-        lines.append(f"#### [{repo_name}]({repo_url})")
+        count = project["contributions"]
+        contribution_label = "contribution" if count == 1 else "contributions"
+        lines.append(
+            f'#### [{repo_name}]({repo_url}) · ⭐ {project["stars"]:,} '
+            f'· {count} {contribution_label}'
+        )
         lines.append("")
 
-        # Sort by the contributor's original PR number, highest/newest first.
-        prs = sorted(grouped[repo_name], key=lambda pr: pr["number"], reverse=True)
+        # Within a project, sort by the contributor's original PR number.
+        prs = sorted(project["prs"], key=lambda pr: pr["number"], reverse=True)
 
         for pr in prs:
             if pr["landed_number"]:
