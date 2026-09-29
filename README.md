@@ -42,8 +42,9 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
 
-#### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-mcp-adapter?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-5-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-mcp-adapter?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-6-8B5CF6?style=flat-square)
 
+- [#733](https://github.com/nicobailon/pi-mcp-adapter/pull/733) — feat: autocomplete MCP prompt argument names
 - [#698](https://github.com/nicobailon/pi-mcp-adapter/pull/698) — fix(jev): keep fallback search within allowed servers
 - [#697](https://github.com/nicobailon/pi-mcp-adapter/pull/697) — fix(config): read UTF-8 BOM-prefixed config files
 - [#693](https://github.com/nicobailon/pi-mcp-adapter/pull/693) — fix(config): preserve malformed config files on write
