@@ -410,7 +410,7 @@ def build_markdown(username, token):
         stars_url = f"{repo_url}/stargazers"
 
         lines.append(
-            f'#### [{repo_name}]({repo_url}) &nbsp;&nbsp; '
+            f'#### [\`{repo_name}\`]({repo_url}) &nbsp;&nbsp; '
             f'[![Stars]({stars_badge})]({stars_url}) &nbsp; '
             f'![Contributions]({contributions_badge})'
         )
