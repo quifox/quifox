@@ -41,8 +41,11 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#8812](https://github.com/microsoft/agent-framework/pull/8812) — .NET: Dispose AI context streaming enumerators on early exit
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
-#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-6-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-9-8B5CF6?style=flat-square)
 
+- [#2619](https://github.com/nicobailon/pi-subagents/pull/2619) — fix(profiles): validate machine overrides before applying settings
+- [#2618](https://github.com/nicobailon/pi-subagents/pull/2618) — fix(missions): project global list summaries from authoritative records
+- [#2616](https://github.com/nicobailon/pi-subagents/pull/2616) — feat: attach scheduled workflows to existing missions
 - [#2606](https://github.com/nicobailon/pi-subagents/pull/2606) — fix: reconcile Linux zombie runners in the same PID namespace
 - [#2605](https://github.com/nicobailon/pi-subagents/pull/2605) — fix: deliver goal notices after auto-drain failures
 - [#2604](https://github.com/nicobailon/pi-subagents/pull/2604) — fix: isolate goal continuation notice errors per mission
