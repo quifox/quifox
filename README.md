@@ -31,8 +31,9 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-7-8B5CF6?style=flat-square)
+#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
 
+- [#8932](https://github.com/microsoft/agent-framework/pull/8932) — .NET: Skip empty Foundry memory context messages
 - [#8885](https://github.com/microsoft/agent-framework/pull/8885) — .NET: Publish synthesized terminal responses with their events
 - [#8877](https://github.com/microsoft/agent-framework/pull/8877) — .NET: Preserve A2A run errors when session save fails
 - [#8844](https://github.com/microsoft/agent-framework/pull/8844) — Python: support ChatKit generated image conversion
