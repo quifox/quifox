@@ -70,4 +70,10 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
+
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/HsiangNianian/dsh-auto-continue?style=flat-square&logo=github&label=stars)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+
+- [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
+- [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
+- [#53](https://github.com/HsiangNianian/dsh-auto-continue/pull/53) — fix(host): exclude child sessions from live recovery
 <!-- OSS-CONTRIBUTIONS:END -->
