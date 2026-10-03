@@ -42,8 +42,10 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#8812](https://github.com/microsoft/agent-framework/pull/8812) — .NET: Dispose AI context streaming enumerators on early exit
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
-#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-10-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-12-8B5CF6?style=flat-square)
 
+- [#2656](https://github.com/nicobailon/pi-subagents/pull/2656) — feat: support daily and weekly zoned schedules
+- [#2655](https://github.com/nicobailon/pi-subagents/pull/2655) — feat: apply reviewed worktree cleanup plans
 - [#2627](https://github.com/nicobailon/pi-subagents/pull/2627) — fix(settings): save builtin agent overrides atomically
 - [#2619](https://github.com/nicobailon/pi-subagents/pull/2619) — fix(profiles): validate machine overrides before applying settings
 - [#2618](https://github.com/nicobailon/pi-subagents/pull/2618) — fix(missions): project global list summaries from authoritative records
@@ -54,6 +56,11 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
+
+#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bowenliang123/dsh-context?style=flat-square&logo=github&label=stars)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+
+- [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
+- [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
 
 #### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-mcp-adapter?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
 
