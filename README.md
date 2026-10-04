@@ -31,6 +31,10 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
+#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
+
+- [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
+
 #### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
 
 - [#8932](https://github.com/microsoft/agent-framework/pull/8932) — .NET: Skip empty Foundry memory context messages
