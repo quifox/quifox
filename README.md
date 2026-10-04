@@ -31,8 +31,9 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
+#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
+- [#6218](https://github.com/bytedance/deer-flow/pull/6218) — fix: include completed child usage in lead budget checks
 - [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
 
 #### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
@@ -46,8 +47,9 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#8812](https://github.com/microsoft/agent-framework/pull/8812) — .NET: Dispose AI context streaming enumerators on early exit
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
-#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-12-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
+- [#2675](https://github.com/nicobailon/pi-subagents/pull/2675) — fix: preserve schedule owner state after lock contention
 - [#2656](https://github.com/nicobailon/pi-subagents/pull/2656) — feat: support daily and weekly zoned schedules
 - [#2655](https://github.com/nicobailon/pi-subagents/pull/2655) — feat: apply reviewed worktree cleanup plans
 - [#2627](https://github.com/nicobailon/pi-subagents/pull/2627) — fix(settings): save builtin agent overrides atomically
