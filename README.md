@@ -31,8 +31,9 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
+- [#6272](https://github.com/bytedance/deer-flow/pull/6272) — fix(channels): handle streamed run errors before dedupe cleanup
 - [#6218](https://github.com/bytedance/deer-flow/pull/6218) — fix: include completed child usage in lead budget checks
 - [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
 
