@@ -38,10 +38,11 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 - [#6218](https://github.com/bytedance/deer-flow/pull/6218) — fix: include completed child usage in lead budget checks
 - [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
 
-#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-11-8B5CF6?style=flat-square)
+#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-12-8B5CF6?style=flat-square)
 
 - [#9001](https://github.com/microsoft/agent-framework/pull/9001) — Python: Isolate the mixed middleware warning assertion
 - [#8997](https://github.com/microsoft/agent-framework/pull/8997) — Python: Preserve streamed logprobs across empty chunks
+- [#8933](https://github.com/microsoft/agent-framework/pull/8933) — .NET: Synchronize background task metadata and defer publication until session creation
 - [#8932](https://github.com/microsoft/agent-framework/pull/8932) — .NET: Skip empty Foundry memory context messages
 - [#8931](https://github.com/microsoft/agent-framework/pull/8931) — .NET: Preserve atomic cache creation across factory failures
 - [#8885](https://github.com/microsoft/agent-framework/pull/8885) — .NET: Publish synthesized terminal responses with their events
