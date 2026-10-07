@@ -63,6 +63,10 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#8812](https://github.com/microsoft/agent-framework/pull/8812) — .NET: Dispose AI context streaming enumerators on early exit
 - [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
 
+#### [`mcp-use/mcp-use`](https://github.com/mcp-use/mcp-use) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/mcp-use/mcp-use?style=flat-square&logo=github&label=stars)](https://github.com/mcp-use/mcp-use/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
+
+- [#2687](https://github.com/mcp-use/mcp-use/pull/2687) — fix(cli): reject non-GitHub origins during deploy
+
 #### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-subagents?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
 - [#2675](https://github.com/nicobailon/pi-subagents/pull/2675) — fix: preserve schedule owner state after lock contention
