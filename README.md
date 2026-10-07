@@ -30,11 +30,13 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 
 ### Featured Project
 
-#### [Agent Core](https://github.com/quifox/agent-core)
+#### 🧩 [Agent Core](https://github.com/quifox/agent-core)
 
 An experimental TypeScript agent framework built around a minimal execution core and explicit plugins. Exploring how sessions, interruption, recovery, and peer-agent collaboration can be composed through lifecycle hooks.
 
-[Repository](https://github.com/quifox/agent-core) · [Architecture](https://github.com/quifox/agent-core/blob/main/docs/guides/architecture.md) · [Showcase](https://github.com/quifox/agent-core/blob/main/docs/media/agent-core-demo.mp4)
+[Repository](https://github.com/quifox/agent-core) · [Architecture](https://github.com/quifox/agent-core/blob/main/docs/guides/architecture.md) · [▶ Showcase](https://github.com/quifox/agent-core/blob/main/docs/media/agent-core-demo.mp4)
+
+---
 
 ### Open Source Contributions
 
