@@ -30,7 +30,7 @@ I also care about the less flashy parts — backend reliability, concurrency, ca
 
 ### Featured Project
 
-#### 🧩 [Agent Core](https://github.com/quifox/agent-core)
+#### 🧩 [Agent Core](https://github.com/quifox/agent-core) · Core + Plugins → Your Application
 
 An experimental TypeScript agent framework built around a minimal execution core and explicit plugins. Exploring how sessions, interruption, recovery, and peer-agent collaboration can be composed through lifecycle hooks.
 
