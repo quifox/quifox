@@ -41,12 +41,22 @@ An experimental TypeScript agent framework built around a minimal execution core
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
+#### [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/infiniflow/ragflow?style=flat-square&logo=github&label=stars)](https://github.com/infiniflow/ragflow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
+
+- [#20546](https://github.com/infiniflow/ragflow/pull/20546) — fix(elasticsearch): propagate search failures with index context
+
 #### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
 
 - [#6292](https://github.com/bytedance/deer-flow/pull/6292) — fix(acp): apply invocation timeout to initialization and session creation
 - [#6272](https://github.com/bytedance/deer-flow/pull/6272) — fix(channels): handle streamed run errors before dedupe cleanup
 - [#6218](https://github.com/bytedance/deer-flow/pull/6218) — fix: include completed child usage in lead budget checks
 - [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
+
+#### [`agentscope-ai/agentscope`](https://github.com/agentscope-ai/agentscope) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/agentscope-ai/agentscope?style=flat-square&logo=github&label=stars)](https://github.com/agentscope-ai/agentscope/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+
+- [#3103](https://github.com/agentscope-ai/agentscope/pull/3103) — fix(scheduler): notify owner after deleting schedules
+- [#3098](https://github.com/agentscope-ai/agentscope/pull/3098) — fix(workspace): clean up failed Docker initialization
+- [#3090](https://github.com/agentscope-ai/agentscope/pull/3090) — fix(tool): omit injected state from inferred function schemas
 
 #### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-12-8B5CF6?style=flat-square)
 
