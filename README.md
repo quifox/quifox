@@ -58,8 +58,9 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#3098](https://github.com/agentscope-ai/agentscope/pull/3098) — fix(workspace): clean up failed Docker initialization
 - [#3090](https://github.com/agentscope-ai/agentscope/pull/3090) — fix(tool): omit injected state from inferred function schemas
 
-#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-12-8B5CF6?style=flat-square)
+#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/microsoft/agent-framework?style=flat-square&logo=github&label=stars)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
+- [#9100](https://github.com/microsoft/agent-framework/pull/9100) — Python: Close delegated provider streams on public stream release
 - [#9001](https://github.com/microsoft/agent-framework/pull/9001) — Python: Isolate the mixed middleware warning assertion
 - [#8997](https://github.com/microsoft/agent-framework/pull/8997) — Python: Preserve streamed logprobs across empty chunks
 - [#8933](https://github.com/microsoft/agent-framework/pull/8933) — .NET: Synchronize background task metadata and defer publication until session creation
