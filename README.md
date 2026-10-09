@@ -41,8 +41,9 @@ An experimental TypeScript agent framework built around a minimal execution core
 ### Open Source Contributions
 
 <!-- OSS-CONTRIBUTIONS:START -->
-#### [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/infiniflow/ragflow?style=flat-square&logo=github&label=stars)](https://github.com/infiniflow/ragflow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
+#### [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/infiniflow/ragflow?style=flat-square&logo=github&label=stars)](https://github.com/infiniflow/ragflow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
+- [#20547](https://github.com/infiniflow/ragflow/pull/20547) — fix(agentic): give web evidence stable content identities
 - [#20546](https://github.com/infiniflow/ragflow/pull/20546) — fix(elasticsearch): propagate search failures with index context
 
 #### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/bytedance/deer-flow?style=flat-square&logo=github&label=stars)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
