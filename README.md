@@ -100,6 +100,11 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
 
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/ranxianglei/billion-context?style=flat-square&logo=github&label=stars)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+
+- [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
+- [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
+
 #### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/nicobailon/pi-mcp-adapter?style=flat-square&logo=github&label=stars)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
 
 - [#743](https://github.com/nicobailon/pi-mcp-adapter/pull/743) — fix(cache): reject private metadata across sessions
@@ -110,11 +115,6 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#693](https://github.com/nicobailon/pi-mcp-adapter/pull/693) — fix(config): preserve malformed config files on write
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
-
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/ranxianglei/billion-context?style=flat-square&logo=github&label=stars)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
-
-- [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
-- [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
 
 #### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/github/stars/HsiangNianian/dsh-auto-continue?style=flat-square&logo=github&label=stars)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
