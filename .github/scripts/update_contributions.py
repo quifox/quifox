@@ -8,6 +8,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 API_ROOT = "https://api.github.com"
@@ -345,6 +346,29 @@ def promoted_contributions(username, token, visibility_cache):
     return contributions
 
 
+def format_stars(stars):
+    # Match Shields' metric() rounding, including JavaScript's toFixed(1).
+    # https://github.com/badges/shields/blob/master/services/text-formatters.js
+    prefixes = ("", "k", "M", "G", "T", "P", "E", "Z", "Y")
+    for power in range(len(prefixes) - 1, 0, -1):
+        unit = 1000 ** power
+        if stars < unit:
+            continue
+
+        scaled = stars / unit
+        if scaled < 10:
+            decimal = Decimal(scaled).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)
+            if decimal != decimal.to_integral_value():
+                return f"{decimal}{prefixes[power]}"
+
+        rounded = int(scaled + 0.5)
+        if rounded >= 1000 and power + 1 < len(prefixes):
+            return f"1{prefixes[power + 1]}"
+        return f"{rounded}{prefixes[power]}"
+
+    return str(stars)
+
+
 def build_markdown(username, token):
     grouped = defaultdict(list)
     repo_metadata_cache = {}
@@ -400,8 +424,8 @@ def build_markdown(username, token):
         repo_url = f"https://github.com/{repo_name}"
         count = project["contributions"]
         stars_badge = (
-            f"https://img.shields.io/github/stars/{repo_name}"
-            "?style=flat-square&logo=github&label=stars"
+            f"https://img.shields.io/badge/stars-{format_stars(project['stars'])}-007ec6"
+            "?style=flat-square&logo=github"
         )
         contributions_badge = (
             "https://img.shields.io/badge/"
