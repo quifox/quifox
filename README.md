@@ -53,7 +53,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#6218](https://github.com/bytedance/deer-flow/pull/6218) — fix: include completed child usage in lead budget checks
 - [#6217](https://github.com/bytedance/deer-flow/pull/6217) — fix: propagate current run failures from wait endpoints
 
-#### [`agentscope-ai/agentscope`](https://github.com/agentscope-ai/agentscope) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-33k-007ec6?style=flat-square&logo=github)](https://github.com/agentscope-ai/agentscope/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`agentscope-ai/agentscope`](https://github.com/agentscope-ai/agentscope) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-34k-007ec6?style=flat-square&logo=github)](https://github.com/agentscope-ai/agentscope/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#3103](https://github.com/agentscope-ai/agentscope/pull/3103) — fix(scheduler): notify owner after deleting schedules
 - [#3098](https://github.com/agentscope-ai/agentscope/pull/3098) — fix(workspace): clean up failed Docker initialization
@@ -100,7 +100,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
 
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-1.9k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-2k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
