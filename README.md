@@ -95,7 +95,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
 
-#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.3k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.4k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
