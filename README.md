@@ -95,12 +95,12 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
 
-#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.1k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.2k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
 
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-2.2k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-2.3k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
@@ -116,7 +116,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-161-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-162-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
 - [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
