@@ -46,7 +46,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#20547](https://github.com/infiniflow/ragflow/pull/20547) — fix(agentic): give web evidence stable content identities
 - [#20546](https://github.com/infiniflow/ragflow/pull/20546) — fix(elasticsearch): propagate search failures with index context
 
-#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-84k-007ec6?style=flat-square&logo=github)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
+#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-85k-007ec6?style=flat-square&logo=github)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
 
 - [#6292](https://github.com/bytedance/deer-flow/pull/6292) — fix(acp): apply invocation timeout to initialization and session creation
 - [#6272](https://github.com/bytedance/deer-flow/pull/6272) — fix(channels): handle streamed run errors before dedupe cleanup
@@ -121,7 +121,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-171-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-172-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
 - [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
