@@ -59,7 +59,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#3098](https://github.com/agentscope-ai/agentscope/pull/3098) — fix(workspace): clean up failed Docker initialization
 - [#3090](https://github.com/agentscope-ai/agentscope/pull/3090) — fix(tool): omit injected state from inferred function schemas
 
-#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-14k-007ec6?style=flat-square&logo=github)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
+#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-15k-007ec6?style=flat-square&logo=github)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
 - [#9100](https://github.com/microsoft/agent-framework/pull/9100) — Python: Close delegated provider streams on public stream release
 - [#9001](https://github.com/microsoft/agent-framework/pull/9001) — Python: Isolate the mixed middleware warning assertion
@@ -100,7 +100,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
 
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.6k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-3.7k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
@@ -121,7 +121,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-179-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-180-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
 - [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
