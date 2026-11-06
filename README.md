@@ -79,10 +79,15 @@ An experimental TypeScript agent framework built around a minimal execution core
 
 - [#2687](https://github.com/mcp-use/mcp-use/pull/2687) — fix(cli): reject non-GitHub origins during deploy
 
-#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.2k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`bowenliang123/dsh-context`](https://github.com/bowenliang123/dsh-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.3k-007ec6?style=flat-square&logo=github)](https://github.com/bowenliang123/dsh-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#107](https://github.com/bowenliang123/dsh-context/pull/107) — fix(host): fold V4 tool-registry developer messages into the timeline
 - [#106](https://github.com/bowenliang123/dsh-context/pull/106) — fix(client): ignore stale detail reads after refold
+
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.1k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+
+- [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
+- [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
 
 #### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.1k-007ec6?style=flat-square&logo=github)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
@@ -99,11 +104,6 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#2528](https://github.com/nicobailon/pi-subagents/pull/2528) — test: run tool activation smoke in CI
 - [#2527](https://github.com/nicobailon/pi-subagents/pull/2527) — fix: support older Git diff prefix options
 - [#2517](https://github.com/nicobailon/pi-subagents/pull/2517) — fix: reject oversized run timeouts
-
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.1k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
-
-- [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
-- [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
 
 #### [`google/adk-java`](https://github.com/google/adk-java) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-1.8k-007ec6?style=flat-square&logo=github)](https://github.com/google/adk-java/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
