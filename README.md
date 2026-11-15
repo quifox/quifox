@@ -106,7 +106,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#1590](https://github.com/google/adk-java/pull/1590) — fix(skills): remove unregistered script tool from default instructions
 - [#1589](https://github.com/google/adk-java/pull/1589) — fix(skills): preserve sibling parts when loading binary resources
 
-#### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-1.6k-007ec6?style=flat-square&logo=github)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-1.7k-007ec6?style=flat-square&logo=github)](https://github.com/nicobailon/pi-mcp-adapter/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-8-8B5CF6?style=flat-square)
 
 - [#743](https://github.com/nicobailon/pi-mcp-adapter/pull/743) — fix(cache): reject private metadata across sessions
 - [#742](https://github.com/nicobailon/pi-mcp-adapter/pull/742) — fix: retry failed list_changed metadata publication
@@ -117,7 +117,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-195-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-198-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
 - [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
