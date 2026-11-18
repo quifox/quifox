@@ -59,23 +59,6 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#3098](https://github.com/agentscope-ai/agentscope/pull/3098) — fix(workspace): clean up failed Docker initialization
 - [#3090](https://github.com/agentscope-ai/agentscope/pull/3090) — fix(tool): omit injected state from inferred function schemas
 
-#### [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-15k-007ec6?style=flat-square&logo=github)](https://github.com/microsoft/agent-framework/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-14-8B5CF6?style=flat-square)
-
-- [#9100](https://github.com/microsoft/agent-framework/pull/9100) — Python: Close delegated provider streams on public stream release
-- [#9094](https://github.com/microsoft/agent-framework/pull/9094) — Python: Preserve AG-UI citations through client and agent streaming
-- [#9001](https://github.com/microsoft/agent-framework/pull/9001) — Python: Isolate the mixed middleware warning assertion
-- [#8997](https://github.com/microsoft/agent-framework/pull/8997) — Python: Preserve streamed logprobs across empty chunks
-- [#8933](https://github.com/microsoft/agent-framework/pull/8933) — .NET: Synchronize background task metadata and defer publication until session creation
-- [#8932](https://github.com/microsoft/agent-framework/pull/8932) — .NET: Skip empty Foundry memory context messages
-- [#8931](https://github.com/microsoft/agent-framework/pull/8931) — .NET: Preserve atomic cache creation across factory failures
-- [#8885](https://github.com/microsoft/agent-framework/pull/8885) — .NET: Publish synthesized terminal responses with their events
-- [#8877](https://github.com/microsoft/agent-framework/pull/8877) — .NET: Preserve A2A run errors when session save fails
-- [#8844](https://github.com/microsoft/agent-framework/pull/8844) — Python: support ChatKit generated image conversion
-- [#8843](https://github.com/microsoft/agent-framework/pull/8843) — Python: support ChatKit structured input conversion
-- [#8813](https://github.com/microsoft/agent-framework/pull/8813) — .NET: Propagate ChatHistoryMemoryProvider caller cancellation
-- [#8812](https://github.com/microsoft/agent-framework/pull/8812) — .NET: Dispose AI context streaming enumerators on early exit
-- [#8796](https://github.com/microsoft/agent-framework/pull/8796) — .NET: Propagate TextSearchProvider caller cancellation
-
 #### [`mcp-use/mcp-use`](https://github.com/mcp-use/mcp-use) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-11k-007ec6?style=flat-square&logo=github)](https://github.com/mcp-use/mcp-use/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-1-8B5CF6?style=flat-square)
 
 - [#2687](https://github.com/mcp-use/mcp-use/pull/2687) — fix(cli): reject non-GitHub origins during deploy
@@ -117,7 +100,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#683](https://github.com/nicobailon/pi-mcp-adapter/pull/683) → [#687](https://github.com/nicobailon/pi-mcp-adapter/pull/687) — fix(cache): invalidate stdio metadata on env mode changes
 - [#678](https://github.com/nicobailon/pi-mcp-adapter/pull/678) → [#686](https://github.com/nicobailon/pi-mcp-adapter/pull/686) — fix(search): dedupe repeated query tokens
 
-#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-203-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
+#### [`HsiangNianian/dsh-auto-continue`](https://github.com/HsiangNianian/dsh-auto-continue) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-205-007ec6?style=flat-square&logo=github)](https://github.com/HsiangNianian/dsh-auto-continue/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-3-8B5CF6?style=flat-square)
 
 - [#55](https://github.com/HsiangNianian/dsh-auto-continue/pull/55) — fix(host): allow manual resume through active pauses
 - [#54](https://github.com/HsiangNianian/dsh-auto-continue/pull/54) — fix(client): preserve newer settings drafts during saves
