@@ -46,7 +46,7 @@ An experimental TypeScript agent framework built around a minimal execution core
 - [#20547](https://github.com/infiniflow/ragflow/pull/20547) — fix(agentic): give web evidence stable content identities
 - [#20546](https://github.com/infiniflow/ragflow/pull/20546) — fix(elasticsearch): propagate search failures with index context
 
-#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-85k-007ec6?style=flat-square&logo=github)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
+#### [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-86k-007ec6?style=flat-square&logo=github)](https://github.com/bytedance/deer-flow/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-4-8B5CF6?style=flat-square)
 
 - [#6292](https://github.com/bytedance/deer-flow/pull/6292) — fix(acp): apply invocation timeout to initialization and session creation
 - [#6272](https://github.com/bytedance/deer-flow/pull/6272) — fix(channels): handle streamed run errors before dedupe cleanup
