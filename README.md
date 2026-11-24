@@ -63,12 +63,12 @@ An experimental TypeScript agent framework built around a minimal execution core
 
 - [#2687](https://github.com/mcp-use/mcp-use/pull/2687) — fix(cli): reject non-GitHub origins during deploy
 
-#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-8.2k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
+#### [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-8.3k-007ec6?style=flat-square&logo=github)](https://github.com/ranxianglei/billion-context/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-2-8B5CF6?style=flat-square)
 
 - [#1534](https://github.com/ranxianglei/billion-context/pull/1534) — fix(persist): retry dirty content stores on graceful flush
 - [#1514](https://github.com/ranxianglei/billion-context/pull/1514) — fix(session): report native compaction ref count correctly
 
-#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.2k-007ec6?style=flat-square&logo=github)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
+#### [`nicobailon/pi-subagents`](https://github.com/nicobailon/pi-subagents) &nbsp;&nbsp; [![Stars](https://img.shields.io/badge/stars-4.3k-007ec6?style=flat-square&logo=github)](https://github.com/nicobailon/pi-subagents/stargazers) &nbsp; ![Contributions](https://img.shields.io/badge/contributions-13-8B5CF6?style=flat-square)
 
 - [#2675](https://github.com/nicobailon/pi-subagents/pull/2675) — fix: preserve schedule owner state after lock contention
 - [#2656](https://github.com/nicobailon/pi-subagents/pull/2656) — feat: support daily and weekly zoned schedules
